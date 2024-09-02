@@ -17,7 +17,7 @@ Este sistema foi projetado para atender às necessidades de um centro de atendim
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Java 11**: Linguagem de programação principal.
+- **Java 17**: Linguagem de programação principal.
 - **Spring Boot**: Framework para desenvolvimento de aplicações Java.
 - **Spring Data JPA**: Persistência de dados.
 - **H2 Database**: Banco de dados em memória para testes e desenvolvimento.
@@ -75,10 +75,9 @@ gerenciamento-solicitacoes
 
 ## 📋 Endpoints da API
 
-- **POST /solicitacoes**: Recebe uma nova solicitação.
-- **GET /atendentes/{id}/solicitacoes**: Retorna todas as solicitações que um atendente está atendendo.
-- **GET /times/{tipo}/fila**: Retorna a fila de solicitações de um determinado time.
-- **PUT /atendentes/{id}/finalizar**: Finaliza uma solicitação em andamento.
+- **POST /api/solicitacoes**: Recebe uma nova solicitação.
+- **GET /api/solicitacoes**: Busca todas solicitações.
+- **GET /api/solicitacoes/{id}**: Busca solicitação por id.
 
 ## 🧪 Testes
 
@@ -95,20 +94,3 @@ Os testes cobrem a lógica de negócios principal e garantem que a distribuiçã
 - **Persistência de Dados**: Utilizar um banco de dados relacional ou NoSQL para persistir dados de solicitações.
 - **Interface de Usuário**: Adicionar uma interface web para gerenciar atendentes e visualizar filas.
 - **Autenticação e Autorização**: Implementar segurança na API REST.
-
-## 🤝 Como Contribuir
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um "issue" ou enviar um "pull request".
-
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
-
-## 📧 Contato
-
-Fique à vontade para entrar em contato para quaisquer dúvidas ou sugestões:
-
-- **Email**: [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
-- **LinkedIn**: [seu-linkedin](https://www.linkedin.com/in/seu-usuario)
