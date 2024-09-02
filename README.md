@@ -91,6 +91,7 @@ Os testes cobrem a lógica de negócios principal e garantem que a distribuiçã
 
 ## 📈 Potenciais Melhorias
 
+- **Criação de fila**: Cria uma fila usando RabbitMQ para concorrencia de gerenciamento de solicitações
 - **Persistência de Dados**: Utilizar um banco de dados relacional ou NoSQL para persistir dados de solicitações.
 - **Interface de Usuário**: Adicionar uma interface web para gerenciar atendentes e visualizar filas.
 - **Autenticação e Autorização**: Implementar segurança na API REST.
