@@ -48,5 +48,28 @@ public class SolicitacaoService {
         return solicitacaoRepository.findById(id);
     }
 
+    private void criarSolicitacao(Solicitacao solicitacao) {
+        // Classificar a solicitação
+        Time time = getAtendente(solicitacao.getTipo());
+
+        // Buscar atendente disponível
+        Atendente atendente = findDisponivelAtendente(time);
+
+        if (atendente != null) {
+            // Atribuir solicitação ao atendente
+            solicitacao.setAtendente(atendente);
+            // ... salvar no banco
+        } else {
+            // Enviar para a fila
+            rabbitTemplate.convertAndSend("solicitacoes", solicitacao);
+        }
+    }
+
+    public Atendente findDisponivelAtendente(Time time) {
+        // Lógica para encontrar um atendente disponível no time
+    }
+
+    public Atendente findDisponivelAtendente(TipoSolicitacao tipo) {
+    }
 }
 
